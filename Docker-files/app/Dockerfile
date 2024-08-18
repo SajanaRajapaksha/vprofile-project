@@ -1,5 +1,5 @@
 FROM openjdk:11 AS BUILD_IMAGE
-RUN apt update && install maven -y
+RUN apt update && apt-get install maven -y
 RUN git clone https://github.com/SajanaRajapaksha/vprofile-project.git
 RUN cd vprofile-project && git checkout docker && mvn install
 
